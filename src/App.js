@@ -95,7 +95,7 @@ function App() {
         <h2>Experience</h2>
         <section className="description">
           프론트앤드 개발자와 관련있는 저의 경험 및 경력사항은 다음과 같습니다. 
-          더 자세한 이력사항은 <span className="notion"><SiNotion /> notion</span> 을 참고해주세요. :)
+          더 자세한 이력사항은 <span className="bold"><SiNotion /> notion</span> 을 참고해주세요. :)
         </section>
         <Section>
           <h3>Education</h3>
@@ -124,38 +124,89 @@ function App() {
         <section className="description">
           다음과 같은 프로젝트를 진행했습니다.
         </section>
-        <section>
+        <section className="project-detail-wrapper">
           <article className="project-image">
             이미지/비디오 
           </article>
-          <article>
-            <div>
+          {/* component 처리 */}
+          <article className="project-stack-wrapper">
+            <div className="project-stack">
               <h3>1. 사용한 기술</h3>
-              <p>
-                <span className="hightlight">HTML</span>
-                <span className="hightlight">CSS</span>
-                <span className="hightlight">jQuery</span>
-                <span className="hightlight">localStorage</span>
-                <span className="hightlight">kakaoAPI</span>
-              </p>
+              <ul>
+                <li><span className="hightlight hashtag">HTML</span></li>
+                <li><span className="hightlight hashtag">CSS</span></li>
+                <li><span className="hightlight hashtag">jQuery</span></li>
+                <li><span className="hightlight hashtag">localStorage</span></li>
+                <li><span className="hightlight hashtag">kakaoAPI</span></li>
+              </ul>
             </div>
-            <div>
-            <h3>2. 주요기능</h3>
-            <ul>
-              <li>회원가입 페이지 : 정규표현식(RegExp)</li>
-              <li>주문 페이지 : 지도API 활용하여 입력받은 주소지의 좌표값을 지도 위에 나타냄</li>
-              <li>주문완료 페이지 : localStorage 활용</li>
-              <li>웹사이트 반응형</li>
-            </ul>
-          </div>
-        </article>
+            <div className="project-description">
+              <h3>2. 주요기능</h3>
+              <ul>
+                <li>회원가입 페이지 : 정규표현식(RegExp)</li>
+                <li>주문 페이지 : 지도API 활용하여 입력받은 주소지의 좌표값을 지도 위에 나타냄</li>
+                <li>주문완료 페이지 : localStorage 활용</li>
+                <li>웹사이트 반응형</li>
+              </ul>
+            </div>
+            <div className="project-code">
+              <p>깃허브코드/ LIVE</p>
+            </div>
+          </article>
+          {/* // component 처리 */}
         </section>
-        <section>
-          깃허브코드/ LIVE
+        <section className="project-pagination">
+          <span className="left-arrow bold">&#8636;</span>
+          <span>1/6</span>
+          <span className="right-arrow bold">&#8640;</span>
         </section>
       </Main>
     </Route>
 
+    {/* contact */}
+    <Route exact path="/contact">
+      <Main>
+        <h3>Contact</h3>
+        <section className="description">
+          이력서와 자기소개서는 <span className="bold"><SiNotion /> notion</span>에서 확인 가능합니다. <br />
+          그 외의 문의사항은 언제든 아래 폼으로 연락주시길 바랍니다.
+        </section>
+        <section className="contact-info">
+          <form action="">
+            <table>
+              <tbody>
+              <tr>
+                <th>성함</th>
+                <td><input type="text" placeholder="홍길동" autoFocus required /></td>
+              </tr>
+              <tr>
+                <th>이메일</th>
+                <td><input type="email" placeholder="admin@naver.com" required /></td>
+              </tr>
+              <tr>
+                <th>연락처</th>
+                <td><input type="text" placeholder="010 0000 0000" required /></td>
+              </tr>
+              <tr>
+                <th>제목</th>
+                <td><input type="text" placeholder="제목" /></td>
+              </tr>
+              <tr className="content">
+                <th>내용</th>
+                <td>
+                  <textarea name="" id="" defaultValue=" " required></textarea>
+                </td>
+              </tr>
+              </tbody>
+            </table>               
+            <button type="submit">제출</button>
+          </form>
+        </section>
+        <footer>
+          &copy; 2021, SU-KYOUNG SHIN. ALL RIGHTS ARE RESERVED
+        </footer>
+      </Main>
+    </Route>
 
     </Switch>
     </div>

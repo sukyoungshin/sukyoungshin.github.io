@@ -151,6 +151,131 @@
   border-radius: 4px;
   background: rgba(191, 183, 176, 0.2);
 }
-.notion{
+.bold {
   font-weight: bold;
+}
+
+/* project */
+.project-image{
+  height: 90px;
+  border: 1px solid red;
+}
+.project-stack-wrapper {
+  padding: 8px;
+  height: 298px;
+  box-sizing: border-box;
+  border: 1px solid red;
+
+  position: relative;
+}
+.project-stack-wrapper h3 {
+  margin: 0;
+  font-size: 14px;
+}
+.project-stack-wrapper ul {
+  margin: 8px 0 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+}
+.project-stack ul {
+  display: inline-flex;
+  flex-direction: row;
+  grid-gap: 8px;
+}
+
+.project-description {
+  margin-top: 32px;
+  border: 1px solid blue;
+}
+.project-code {
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid blue;
+
+  position: absolute;
+  right: 8px;
+  bottom: 16px;
+}
+
+.project-pagination {
+  border: 1px solid red;
+
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* contact */
+.contact-info {
+  width: 100%;
+}
+.contact-info form,
+.contact-info table {
+  width: 100%;
+}
+.contact-info table {
+  margin: 0 0 24px 0;
+}
+.contact-info table tr {
+  width: 100%;
+  height: 40px;
+  display: table;
+  border-bottom: 1px solid red;
+  border-collapse: collapse;
+}
+.contact-info table th {
+  width: 40%;
+}
+.contact-info table td {
+  width: 60%;
+}
+
+.contact-info table th,
+.contact-info table td {
+  padding: 0;
+  text-align: left;
+  font-size: 12px;
+}
+.contact-info table tr.content th {
+  padding-top: 14px;
+  vertical-align: top;
+}
+.contact-info table td {
+  height: fit-content;
+}
+.contact-info table tbody input[type="text"],
+.contact-info table tbody input[type="email"],
+.contact-info table tbody textarea {
+  padding: 0 0 0 8px;
+  width: 100%;
+  height: 32px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+.contact-info table tbody textarea {
+  padding: 14px 0 0 0;
+  resize: none;
+  height: 168px;
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.contact-info form button[type="submit"] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+}
+footer {
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
 }
