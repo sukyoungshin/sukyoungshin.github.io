@@ -1,13 +1,12 @@
 import React from 'react';
 import './HamburgerMenu.css';
 
-function HamburgerMenu() {
+function HamburgerMenu({ modalHandler }) {
+
   return (
-    <a href="#">
-      <div className="menu-icon">
-        <span></span>
-      </div>
-    </a>
+    <div className="menu-icon" onClick={modalHandler}>
+      <span></span>
+    </div>
   );
 };
 

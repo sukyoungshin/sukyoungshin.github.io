@@ -8,7 +8,12 @@ function Contact() {
     <Main>
       <h2>Contact</h2>
       <section className="description">
-        <p>이력서와 자기소개서는 <a href="#"><span className="bold"><SiNotion /> notion</span></a>에서 확인 가능합니다. <br />
+        <p>
+          이력서와 자기소개서는&nbsp;
+          <a href="https://www.notion.so/Front-End-_-8e50ff3d1f934c378982a264f27e307e" target="_blank" rel="noreferrer" title="노션 바로가기">
+            <span className="bold"><SiNotion /> notion</span>
+          </a> 
+          에서 확인 가능합니다. <br />
         그 외의 문의사항은 언제든 아래 폼으로 연락주시길 바랍니다.</p>
       </section>
       <section className="contact-info">

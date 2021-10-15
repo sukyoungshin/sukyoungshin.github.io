@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export const Main = styled.main`
@@ -8,8 +7,19 @@ export const Main = styled.main`
   box-sizing: border-box;
   color: #F2F2F2;
 
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  h2 {
+    margin: 40px 0 0 0px;
+  }
+  h2::first-letter {
+    color: #F23D5E;
+  }
+
   .description {
-    margin: 24px 0 32px 0;
+    margin: 24px 0;
     font-size: 12px;
   }
   a:link, a:focus, a:visited {
@@ -19,14 +29,19 @@ export const Main = styled.main`
     position: relative;
   }
 
-  h2 {
-    margin: 40px 0 0 0px;
-  }
   p {
     margin: 0;
+    line-height: 20px;
+    font-size: 12px;
   }
+
   .introduce p {
-    margin: 8px 0;
+    margin: 4px 0;
+    line-height: 20px;
+    font-size: 12px;
+  }
+  .introduce p:not(.greet) {
+    text-indent: 4px;
   }
 `;
 
@@ -48,11 +63,11 @@ export const Section = styled.section`
   }
 
   span {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .hightlight {
-    display: inline-block;
+    display: inline;
     padding: 2px 4px;
     border-radius: 4px;
     background: rgba(191, 183, 176, 0.2);

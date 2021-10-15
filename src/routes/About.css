@@ -25,6 +25,12 @@
   grid-gap: 4px;
 }
 
+.introduce-summary li::before {
+  content: '-';
+  display: inline-block;
+  margin-right: 8px;
+}
+
 .introduce{
   font-size: 14px;
 }
@@ -33,11 +39,12 @@
 }
 
 .introduce-hashtag {
-  margin: 16px 0 0 0;
+  margin: 24px 0 0 0;
   width: 100%;
 }
 .introduce-hashtag h3 {
   margin: 0;
+  font-size: 14px;
 }
 .introduce-hashtag ul {
   margin: 0;

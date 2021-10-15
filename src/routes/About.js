@@ -1,5 +1,6 @@
 import React from 'react';
 import { Main } from '../Styled';
+import { SiGithub, SiCodepen } from 'react-icons/si';
 import './About.css';
 
 function About() {
@@ -10,9 +11,17 @@ function About() {
         <img src="/assets/profile.png" alt="프로필사진" />
         <ul className="introduce-summary">
           <li>신수경</li>
-          <li>010 8949 6027</li>
-          <li>sukyoung.dev@gmail.com</li>
-          <li>GitHub, Velog, CodePen</li>
+          <li>
+            010 8949 6027
+          </li>
+          <li>
+            <a href="mailto:sukyoung.dev@gmail.com" title="메일보내기">sukyoung.dev@gmail.com</a>
+          </li>
+          <li> 
+            <a href="https://github.com/sukyoungshin" target="_blank" rel="noreferrer" title="깃허브"><SiGithub /> </a>, 
+            <a href="https://codepen.io/fe_dev" target="_blank" rel="noreferrer" title="코드펜"> <SiCodepen /></a> , 
+            Velog
+          </li>
         </ul>
       </section>
       <section className="introduce">

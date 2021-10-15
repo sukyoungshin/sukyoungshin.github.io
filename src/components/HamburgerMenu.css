@@ -10,6 +10,7 @@
   position: absolute;
   top: 8px;
   right: 16px;
+  z-index: 9999;
 }
 .menu-icon:hover {
   background: #F23D5E; /* modify later */

@@ -54,6 +54,7 @@
   box-sizing: border-box;
   outline: none;
   border: none;
+  font-size: 12px;
 }
 .contact-info table tbody textarea {
   padding: 14px 0 0 8px;
@@ -74,9 +75,14 @@
 footer {
   height: 32px;
   line-height: 32px;
-  font-size: 12px;
+  font-size: 10px;
 
   position: absolute;
   right: 16px;
   bottom: 0;
+}
+
+footer a {
+  color: #F2F2F2;
+  text-decoration: none;
 }

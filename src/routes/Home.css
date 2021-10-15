@@ -5,7 +5,7 @@
   position: absolute;
 }
 .app-container-bg{
-  /* background-image: url('/src/img/main.jpg'); */
+  /* background-image: url('/assets/main.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -45,9 +45,10 @@
   height: 47px;
   backdrop-filter: invert(1);
 
-  animation: textUpDown 3s ease-in-out alternate infinite;
+  /* animation: textUpDown 3s ease-in-out alternate infinite; */
 }
 
+/* 
 @keyframes textUpDown {
   0% {
     top: 20%;
@@ -57,7 +58,7 @@
   }
 } 
 
-/* .description{
+.description{
   margin: 24px 0 32px 0;
   font-size: 12px;
 }
