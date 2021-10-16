@@ -1,0 +1,90 @@
+/* 프로젝트 소개 전체 WRAPPER */
+.project-detail-wrapper {
+  height: calc(100% - 192px);
+}
+
+/* 프로젝트 이미지 WRAPPER */
+.project-image-wrapper{
+  height: 20%;
+  background: rgba(255, 0, 0, 0.1);
+}
+
+/* 프로젝트 콘텐츠 WRAPPER */
+.project-content-wrapper {
+  padding: 8px;
+  height: 80%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.1);
+
+  position: relative;
+
+  display: inline-flex;
+  flex-direction: column;
+  grid-gap: 8px;
+}
+.project-content-wrapper h3 {
+  margin: 0;
+  font-size: 14px;
+}
+.project-content-wrapper ul {
+  margin: 8px 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+
+  display: inline-flex;
+  flex-direction: column;
+  grid-gap: 2px;
+}
+
+/* 1. 사용한 기술 */
+.project-stack {
+  height: fit-content;
+}
+.project-stack ul {
+  margin: 8px 0;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-gap: 8px;
+  font-size: 14px;
+}
+
+.project-stack span.hightlight {
+  display: inline;
+  padding: 2px 4px;
+  font-size: 12px;
+  border-radius: 4px;
+  background: rgba(191, 183, 176, 0.2);
+}
+
+
+/* 2. 링크 */
+.project-code {
+  margin: 0;
+  height: fit-content;
+}
+
+/* 3. 주요기능 */
+.project-description{
+  flex: 1; /* flex 1칸 전체를 차지하도록 */
+  overflow-y: auto;
+}
+.project-description li::before {
+  content: '· ';
+  display: inline-block;
+  margin-right: 4px;
+}
+
+/* custom scroll바 */
+.project-description::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+.project-description::-webkit-scrollbar-track{
+  background: transparent;
+}
+.project-description::-webkit-scrollbar-thumb{
+  background: #BFBFBF;
+}
+
