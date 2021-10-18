@@ -21,7 +21,7 @@ export const Main = styled.main`
   .description {
     margin: 24px 0;
     font-size: 12px;
-    height: 20px;
+
   }
   a:link, a:focus, a:visited {
     color: #F2F2F2;
@@ -73,9 +73,4 @@ export const Section = styled.section`
     border-radius: 4px;
     background: rgba(191, 183, 176, 0.2);
   }
-
 `;
-
-// export const Bold = styled.span`
-//   font-weight: bold;
-// `;
