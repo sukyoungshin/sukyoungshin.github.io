@@ -6,7 +6,7 @@ import { projectContent } from '../utilities/projectContent';
 
 function Project() {
 
-  const [ projectIndex, setProjectIndex ] = useState(0); // 프로젝트 배열 index# : 0, 1, 2
+  const [ projectIndex, setProjectIndex ] = useState(0); // 프로젝트 배열 index#
 
   return (
     <Main>
@@ -15,7 +15,7 @@ function Project() {
       <section className="description">
         <p>다음과 같은 프로젝트를 진행했습니다.</p>
       </section>
-      {/* 프로젝트 소개 */}
+      {/* 프로젝트 상세 소개 */}
       <ProjectIntroduce 
         projectContent={projectContent[projectIndex]} 
       />

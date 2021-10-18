@@ -6,13 +6,15 @@ function ProjectIntroduce({ projectContent }) {
   return (
       <div className="project-detail-wrapper">
       <div className="project-image-wrapper">
-
+        <ul>
         {
           projectContent.img.map((image, idx) => (
-            <img src={image} alt="사진" key={idx} />
+            <li key={idx}>
+              <img src={image} alt="사진" />
+            </li>
           ))
         }
-
+        </ul>
       </div>
       <div className="project-content-wrapper">
         <div className="project-stack">
@@ -31,9 +33,8 @@ function ProjectIntroduce({ projectContent }) {
           <h3>2. 링크</h3>
           <ul>
             <li>
-              {/* ⭕ 객체는 map 안돌려도 됨 ⭕ */}
               <a href={projectContent.url.github} target="_blank" rel="noreferrer">깃허브 코드</a>
-              /
+              &nbsp;/&nbsp;
               <a href={projectContent.url.live} target="_blank" rel="noreferrer">라이브 데모</a>
             </li>
           </ul>
@@ -43,7 +44,9 @@ function ProjectIntroduce({ projectContent }) {
           <ul>
             {
               projectContent.feature.map((feat, idx) => (
-                <li key={idx}>{feat}</li>
+                <li key={idx}>
+                  {feat}
+                </li>
               ))
             }
           </ul>
