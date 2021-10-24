@@ -1,9 +1,37 @@
-import React from 'react';
-import { Main } from '../Styled';
+import React, { useState } from 'react';
+import axios from 'axios';
 import { SiNotion } from 'react-icons/si';
+import { Main } from '../Styled';
 import './Contact.css';
 
 function Contact() {
+
+  const [ userData, setUserData ] = useState({
+    username: '',
+    useremail: '',
+    usercontact: '',
+    emailtitle: '',
+    emailcontent: ''
+  });
+  const { username, useremail, usercontact, emailtitle, emailcontent } = userData;
+
+  const changeHandler = (e) => setUserData({
+    ...userData,
+    [e.target.name] : e.target.value,
+  });
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    try {
+      const postUserData = axios.post('https://sheet.best/api/sheets/7d47a005-f361-4999-8467-3dd29a6f813a', userData);
+      setUserData(postUserData);
+      console.log('완료', userData);
+    } catch(err) {
+      console.log(err);
+    }
+  };
+
   return (
     <Main>
       <h2>Contact</h2>
@@ -17,29 +45,29 @@ function Contact() {
         그 외의 문의사항은 언제든 아래 폼으로 연락주시길 바랍니다.</p>
       </section>
       <section className="contact-info">
-        <form action="">
+        <form action="" onSubmit={submitHandler}>
           <table>
             <tbody>
             <tr>
-              <th>성함</th>
-              <td><input type="text" placeholder="홍길동" autoFocus required /></td>
+              <th><label htmlFor="username"></label>성함</th>
+              <td><input type="text" id="username" name="username" value={username} onChange={changeHandler} placeholder="홍길동" autoFocus required /></td>
             </tr>
             <tr>
-              <th>이메일</th>
-              <td><input type="email" placeholder="admin@naver.com" required /></td>
+              <th><label htmlFor="useremail">이메일</label></th>
+              <td><input type="email" id="useremail" name="useremail" value={useremail} onChange={changeHandler} placeholder="admin@naver.com" required /></td>
             </tr>
             <tr>
-              <th>연락처</th>
-              <td><input type="text" placeholder="010 0000 0000" required /></td>
+              <th><label htmlFor="usercontact">연락처</label></th>
+              <td><input type="text" id="usercontact" name="usercontact" value={usercontact} onChange={changeHandler} placeholder="010 0000 0000" required /></td>
             </tr>
             <tr>
-              <th>제목</th>
-              <td><input type="text" placeholder="제목" /></td>
+              <th><label htmlFor="emailtitle">제목</label></th>
+              <td><input type="text" id="emailtitle" name="emailtitle" value={emailtitle} onChange={changeHandler} placeholder="제목" /></td>
             </tr>
             <tr className="content">
-              <th>내용</th>
+              <th><label htmlFor="emailcontent">내용</label></th>
               <td>
-                <textarea name="" id=""  placeholder="내용을 입력해주세요." required></textarea>
+                <textarea id="emailcontent" name="emailcontent" value={emailcontent} onChange={changeHandler} placeholder="내용을 입력해주세요." required></textarea>
               </td>
             </tr>
             </tbody>

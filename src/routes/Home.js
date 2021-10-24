@@ -4,7 +4,7 @@ import './Home.css';
 function Home() {
   return (
     <>
-    <div className="app-container-bg"></div>
+    <div className="app-container-bg" style={{backgroundImage:'url(/assets/main.jpg)'}}></div>
     <div className="app-container-text">
       <h1>Hi, I'm Frontend Developer</h1>
     </div>

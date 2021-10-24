@@ -27,7 +27,7 @@ function About() {
       <section className="introduce">
         <p className="greet">안녕하세요!</p> 
         <p>프론트앤드 개발자가 되기 위해, 국비 과정(3개월) 및 일반과정(6개월)을 수료하였으며 HTML, CSS, JavaScript, React js를 학습하였습니다. </p>
-        <p>실무에 바로 투입될 수 있는 실력을 갖추기 위해 HTTP, Redux, Firebase 강의를 듣고 개인프로젝트를 진행하며 부족한 부분을 채워나가고 있습니다. 이 후 React Native와 Node.js, TypeScript를 공부할 예정입니다.</p>
+        <p>실무에 바로 투입될 수 있는 실력을 갖추기 위해 API 및 HTTP 강의를 듣고 개인프로젝트를 진행하며 부족한 부분을 채워나가고 있습니다. 지금은 React를 공부하고 있으며, Redux와 TypeScript를 공부할 예정입니다.</p>
         <p>약 3년간 글로벌기업에서 서비스담당자로 근무하며 영문 구글링을 통해 문제를 해결했던 경험이 있어, 필요한 문서를 빠르게 찾고 StackOverflow나 공식Document의 원문을 볼 수 있는 강점을 갖추고 있습니다.</p>
       </section>
       <section className="introduce-hashtag">

@@ -17,14 +17,14 @@ function App() {
   return (
     <HashRouter>
       <div className="app-container">
-        {/* 햄버거 메뉴 및 모달팝업 */}
+        {/* 햄버거 메뉴아이콘 */}
         <HamburgerMenu modalHandler={modalHandler} />
+        {/* 메뉴 모달팝업 */}
         {
           modal 
           ? <Modal modalHandler={modalHandler} />
           : null
         }
-
 
         {/* ROUTER */}      
         <Switch>

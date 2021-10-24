@@ -4,7 +4,10 @@ import './HamburgerMenu.css';
 function HamburgerMenu({ modalHandler }) {
 
   return (
-    <div className="menu-icon" onClick={modalHandler}>
+    <div 
+      className="menu-icon" 
+      onClick={modalHandler}
+    >
       <span></span>
     </div>
   );
