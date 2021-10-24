@@ -15,10 +15,14 @@ function Contact() {
   });
   const { username, useremail, usercontact, emailtitle, emailcontent } = userData;
 
-  const changeHandler = (e) => setUserData({
+  const changeHandler = (e) => {
+    const { value, name } = e.target;
+
+    return setUserData({
     ...userData,
-    [e.target.name] : e.target.value,
-  });
+    [name] : value,
+    })
+  };
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -26,7 +30,6 @@ function Contact() {
     try {
       const postUserData = axios.post('https://sheet.best/api/sheets/7d47a005-f361-4999-8467-3dd29a6f813a', userData);
       setUserData(postUserData);
-      console.log('완료', userData);
     } catch(err) {
       console.log(err);
     }
@@ -44,37 +47,59 @@ function Contact() {
           에서 확인 가능합니다. <br />
         그 외의 문의사항은 언제든 아래 폼으로 연락주시길 바랍니다.</p>
       </section>
+      
       <section className="contact-info">
         <form action="" onSubmit={submitHandler}>
           <table>
             <tbody>
             <tr>
-              <th><label htmlFor="username"></label>성함</th>
-              <td><input type="text" id="username" name="username" value={username} onChange={changeHandler} placeholder="홍길동" autoFocus required /></td>
+              <th>
+                <label htmlFor="username">성함</label>
+              </th>
+              <td>
+                <input type="text" id="username" name="username" value={username} onChange={changeHandler} placeholder="홍길동" autoFocus required />
+              </td>
             </tr>
             <tr>
-              <th><label htmlFor="useremail">이메일</label></th>
-              <td><input type="email" id="useremail" name="useremail" value={useremail} onChange={changeHandler} placeholder="admin@naver.com" required /></td>
+              <th>
+                <label htmlFor="useremail">이메일</label>
+              </th>
+              <td>
+                <input type="email" id="useremail" name="useremail" value={useremail} onChange={changeHandler} placeholder="admin@naver.com" required />
+              </td>
             </tr>
             <tr>
-              <th><label htmlFor="usercontact">연락처</label></th>
-              <td><input type="text" id="usercontact" name="usercontact" value={usercontact} onChange={changeHandler} placeholder="010 0000 0000" required /></td>
+              <th>
+                <label htmlFor="usercontact">연락처</label>
+              </th>
+              <td>
+                <input type="text" id="usercontact" name="usercontact" value={usercontact} onChange={changeHandler} placeholder="010 0000 0000" required />
+              </td>
             </tr>
             <tr>
-              <th><label htmlFor="emailtitle">제목</label></th>
-              <td><input type="text" id="emailtitle" name="emailtitle" value={emailtitle} onChange={changeHandler} placeholder="제목" /></td>
+              <th>
+                <label htmlFor="emailtitle">제목</label>
+              </th>
+              <td>
+                <input type="text" id="emailtitle" name="emailtitle" value={emailtitle} onChange={changeHandler} placeholder="제목" />
+              </td>
             </tr>
             <tr className="content">
-              <th><label htmlFor="emailcontent">내용</label></th>
+              <th>
+                <label htmlFor="emailcontent">내용</label>
+              </th>
               <td>
                 <textarea id="emailcontent" name="emailcontent" value={emailcontent} onChange={changeHandler} placeholder="내용을 입력해주세요." required></textarea>
               </td>
             </tr>
             </tbody>
-          </table>               
+          </table> 
+
           <button type="submit">제출</button>
+
         </form>
       </section>
+
       <footer>
         &copy; 2021, SU-KYOUNG SHIN. ALL RIGHTS ARE RESERVED
       </footer>

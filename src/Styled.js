@@ -29,6 +29,9 @@ export const Main = styled.main`
 
     position: relative;
   }
+  a:hover {
+    text-decoration: underline;
+  }
 
   p {
     margin: 0;
