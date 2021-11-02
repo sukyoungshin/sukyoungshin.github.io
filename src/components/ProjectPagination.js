@@ -1,5 +1,5 @@
-import React from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import React, { useEffect } from 'react';
+// import { useEffect } from 'react/cjs/react.development';
 import './ProjectPagination.css';
 
 function ProjectPagination({ projectContent, projectIndex, setProjectIndex }) {
