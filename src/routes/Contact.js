@@ -41,7 +41,7 @@ function Contact() {
       <section className="description">
         <p>
           이력서와 자기소개서는&nbsp;
-          <a href="https://www.notion.so/Front-End-_-8e50ff3d1f934c378982a264f27e307e" target="_blank" rel="noreferrer" title="노션 바로가기">
+          <a href="https://www.notion.so/8e50ff3d1f934c378982a264f27e307e" target="_blank" rel="noreferrer" title="노션 바로가기">
             <span className="bold"><SiNotion /> notion</span>
           </a> 
           에서 확인 가능합니다. <br />

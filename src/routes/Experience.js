@@ -10,7 +10,7 @@ function Experience() {
         <p>
           프론트앤드 개발자와 관련있는 저의 경험 및 경력사항은 다음과 같습니다. 
           더 자세한 이력사항은 &nbsp;
-          <a href="https://www.notion.so/Front-End-_-8e50ff3d1f934c378982a264f27e307e" target="_blank" rel="noreferrer" title="노션 바로가기">
+          <a href="https://www.notion.so/8e50ff3d1f934c378982a264f27e307e" target="_blank" rel="noreferrer" title="노션 바로가기">
             <span className="bold"><SiNotion /> notion</span>
           </a> 
           을 참고해주세요. :)
