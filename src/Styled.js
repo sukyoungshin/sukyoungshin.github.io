@@ -34,9 +34,13 @@ export const Main = styled.main`
   }
 
   p {
-    margin: 0;
     line-height: 20px;
     font-size: 12px;
+  }
+
+  .education p,
+  .certificate p {
+    margin: 0;
   }
 
   .introduce p {

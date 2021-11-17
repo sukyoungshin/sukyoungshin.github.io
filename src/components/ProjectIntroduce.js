@@ -17,8 +17,12 @@ function ProjectIntroduce({ projectContent }) {
         </ul>
       </div>
       <div className="project-content-wrapper">
+        <div className="project-title">
+          <h3>1. 프로젝트명 </h3>
+          <p>{projectContent.title}</p>
+        </div>
         <div className="project-stack">
-          <h3>1. 사용한 기술</h3>
+          <h3>2. 사용한 기술</h3>
           <ul>
             {
               projectContent.techStack.map((stack, idx) => (
@@ -30,7 +34,7 @@ function ProjectIntroduce({ projectContent }) {
           </ul>
         </div>
         <div className="project-code">
-          <h3>2. 링크</h3>
+          <h3>3. 링크</h3>
           <ul>
             <li>
               <a href={projectContent.url.github} target="_blank" rel="noreferrer">깃허브 코드</a>
@@ -40,7 +44,7 @@ function ProjectIntroduce({ projectContent }) {
           </ul>
         </div>
         <div className="project-description">
-          <h3>3. 주요기능</h3>
+          <h3>4. 주요기능</h3>
           <ul>
             {
               projectContent.feature.map((feat, idx) => (

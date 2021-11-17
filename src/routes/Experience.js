@@ -18,7 +18,7 @@ function Experience() {
       </section>
       <Section>
         <h3>Education</h3>
-        <ul>
+        <ul className="education">
           <li>
           <p>
             <span className="hightlight">2021.06 ~ 2021.09</span>
@@ -47,7 +47,7 @@ function Experience() {
       </Section>
       <Section style={{ margin: '24px 0 0 0'}}>
         <h3>Certificate</h3>
-        <ul>
+        <ul className="certificate">
           <li>
           <p>
             <span className="hightlight">2021.04.30</span> 

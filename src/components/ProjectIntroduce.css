@@ -29,6 +29,7 @@
 
 /* 프로젝트 콘텐츠 WRAPPER */
 .project-content-wrapper {
+  margin: 8px 0 0 0;
   padding: 8px;
   width: 100%;
   height: 80%;
@@ -54,8 +55,15 @@
   flex-direction: column;
   grid-gap: 2px;
 }
+/* 1. 프로젝트명 */
+.project-title {
+  height: fit-content;
+}
+.project-title p {
+  margin: 8px 0;
+}
 
-/* 1. 사용한 기술 */
+/* 2. 사용한 기술 */
 .project-stack {
   height: fit-content;
 }
@@ -67,7 +75,6 @@
   grid-gap: 8px;
   font-size: 14px;
 }
-
 .project-stack span.hightlight {
   display: inline;
   padding: 2px 4px;
@@ -76,14 +83,13 @@
   background: rgba(191, 183, 176, 0.2);
 }
 
-
-/* 2. 링크 */
+/* 3. 링크 */
 .project-code {
   margin: 0;
   height: fit-content;
 }
 
-/* 3. 주요기능 */
+/* 4. 주요기능 */
 .project-description{
   flex: 1; /* flex 1칸 전체를 차지하도록 */
   overflow-y: auto;
