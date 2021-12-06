@@ -7,14 +7,14 @@ React를 이용하여 만든 개인 포트폴리오 앱 입니다.
 🔗 URL : [LIVE DEMO](https://sukyoungshin.github.io/githubpage/), [깃허브코드](https://github.com/sukyoungshin/githubpage)
 
 ### Features
-
+- Contact: 폼 작성완료 시, google sheet로 입력한 데이터 전송 (API활용)
 (추가 예정)
 
 
 ### Dependencies
 
 - ⚙ 패키지매니저 : yarn install
-- 🔨 Dependencies : `React` `React-router` `Styled-components` `반응형`
+- 🔨 Dependencies : `react` `axios` `react-icons` `react-router(v5)` `styled-components` `반응형`
 
 ```
 "dependencies": {
