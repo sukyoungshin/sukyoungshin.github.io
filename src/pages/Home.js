@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 
-function Home() {
+const Home = () => {
   return (
     <>
     <div className="app-container-bg" style={{backgroundImage:'url(/assets/main.jpg)'}}></div>

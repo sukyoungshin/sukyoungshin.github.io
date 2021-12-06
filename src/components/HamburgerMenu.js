@@ -1,15 +1,12 @@
 import React from 'react';
-import './HamburgerMenu.css';
+import { MenuIcon } from '../Styled';
 
-function HamburgerMenu({ modalHandler }) {
+const HamburgerMenu = ({ modalHandler }) => {
 
   return (
-    <div 
-      className="menu-icon" 
-      onClick={modalHandler}
-    >
+    <MenuIcon onClick={modalHandler}>
       <span></span>
-    </div>
+    </MenuIcon>
   );
 };
 

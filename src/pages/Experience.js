@@ -2,7 +2,7 @@ import React from 'react';
 import { Main, Section } from '../Styled';
 import { SiNotion } from 'react-icons/si';
 
-function Experience() {
+const Experience = () => {
   return (
     <Main>
       <h2>Experience</h2>

@@ -3,7 +3,7 @@ import { Main } from '../Styled';
 import { SiGithub, SiCodepen, SiMicrodotblog } from 'react-icons/si';
 import './About.css';
 
-function About() {
+const About = () => {
   return (
     <Main>
       <h2>About me</h2>

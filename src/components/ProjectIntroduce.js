@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProjectIntroduce.css';
 
-function ProjectIntroduce({ projectContent }) {
+const ProjectIntroduce = ({ projectContent }) => {
 
   return (
       <div className="project-detail-wrapper">

@@ -1,41 +1,33 @@
-import React, { useState } from 'react';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
-import './App.css';
-import Home from './routes/Home';
-import About from './routes/About';
-import Experience from './routes/Experience';
-import Project from './routes/Project';
-import Contact from './routes/Contact';
-import HamburgerMenu from './components/HamburgerMenu';
-import Modal from './components/Modal';
+import React from 'react';
+// Routes
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Experience from './pages/Experience';
+import Home from './pages/Home';
+import Layout from './pages/Layout';
+import NoMatch from './pages/NoMatch';
+import Project from './pages/Project';
+// STYLE
+import { GlobalStyle } from './Styled';
 
 const App = () => {
-
-  const [ modal, setModal ] = useState(false); // when : (true)모달OPEN, (false)모달close
-  const modalHandler = () => setModal(() => !modal); // 모달팝업 핸들러
-
   return (
+    <>
+    <GlobalStyle />
     <BrowserRouter>
-      <div className="app-container">
-        {/* 햄버거 메뉴아이콘 */}
-        <HamburgerMenu modalHandler={modalHandler} />
-        {/* 메뉴 모달팝업 */}
-        {
-          modal 
-          ? <Modal modalHandler={modalHandler} />
-          : null
-        }
-
-        {/* ROUTER */}      
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/experience" component={Experience} />
-          <Route exact path="/project" component={Project} />
-          <Route exact path="/contact" component={Contact} />
-        </Switch>
-      </div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="experience" element={<Experience />} />
+          <Route path="project" element={<Project />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoMatch />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
+    </>
   );
 };
 

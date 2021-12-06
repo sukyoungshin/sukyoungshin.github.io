@@ -4,7 +4,7 @@ import ProjectPagination from '../components/ProjectPagination';
 import { Main } from '../Styled';
 import { projectContent } from '../utilities/projectContent';
 
-function Project() {
+const Project = () => {
 
   const [ projectIndex, setProjectIndex ] = useState(0); // 프로젝트 배열 index#
 

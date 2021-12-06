@@ -4,7 +4,7 @@ import { SiNotion } from 'react-icons/si';
 import { Main } from '../Styled';
 import './Contact.css';
 
-function Contact() {
+const Contact = () => {
 
   const [ userData, setUserData ] = useState({
     username: '',

@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProjectPagination.css';
 
-function ProjectPagination({ projectContent, projectIndex, setProjectIndex }) {
+const ProjectPagination = ({ projectContent, projectIndex, setProjectIndex }) => {
   
   // projectIndex : 0, 1, 2     
   // projectContent.length : 3 
