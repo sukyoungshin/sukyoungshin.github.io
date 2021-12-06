@@ -7,8 +7,7 @@ React를 이용하여 만든 개인 포트폴리오 앱 입니다.
 🔗 URL : [LIVE DEMO](https://sukyoungshin.github.io/githubpage/), [깃허브코드](https://github.com/sukyoungshin/githubpage)
 
 ### Features
-- Contact: 폼 제출 시, 연동된 google sheet로 입력되어진 데이터 POST전송 (API활용)
-(추가 예정)
+- Contact: 폼 제출 시, 연동된 google sheet에 입력된 데이터를 POST전송 (API활용) <br/>
 
 
 ### Dependencies
