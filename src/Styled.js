@@ -1,4 +1,24 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+::root {
+  --white: #F2F2F2;
+  --lightgray: #BFBFBF; 
+  --darkgray: #524b4b;
+  --black: #333;
+  --pink: #F23D5E; 
+  --green: #04BF68;
+}
+
+.app-container{
+  margin: 0 auto;
+  max-width: 360px;
+  height: 640px;
+  background: #333;
+
+  position: relative;
+}
+`;
 
 export const Main = styled.main`
   width: 100%;

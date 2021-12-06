@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Switch, Route, HashRouter } from 'react-router-dom';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Home from './routes/Home';
 import About from './routes/About';
@@ -9,13 +9,13 @@ import Contact from './routes/Contact';
 import HamburgerMenu from './components/HamburgerMenu';
 import Modal from './components/Modal';
 
-function App() {
+const App = () => {
 
   const [ modal, setModal ] = useState(false); // when : (true)모달OPEN, (false)모달close
   const modalHandler = () => setModal(() => !modal); // 모달팝업 핸들러
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="app-container">
         {/* 햄버거 메뉴아이콘 */}
         <HamburgerMenu modalHandler={modalHandler} />
@@ -35,7 +35,7 @@ function App() {
           <Route exact path="/contact" component={Contact} />
         </Switch>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
