@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { SiNotion } from 'react-icons/si';
-import { Main } from '../Styled';
-import './Contact.css';
+import { MainWrapper, Description, ContactForm, ContactTable, SubmitButton, Bold } from '../Styled';
 
 const Contact = () => {
 
@@ -36,21 +35,28 @@ const Contact = () => {
   };
 
   return (
-    <Main>
+    <MainWrapper>
       <h2>Contact</h2>
-      <section className="description">
+      <Description>
         <p>
           이력서와 자기소개서는&nbsp;
-          <a href="https://www.notion.so/8e50ff3d1f934c378982a264f27e307e" target="_blank" rel="noreferrer" title="노션 바로가기">
-            <span className="bold"><SiNotion /> notion</span>
+          <a 
+            href="https://www.notion.so/8e50ff3d1f934c378982a264f27e307e" 
+            target="_blank" 
+            rel="noreferrer" 
+            title="노션 바로가기"
+          >
+            <Bold>
+              <SiNotion /> notion
+            </Bold>
           </a> 
           에서 확인 가능합니다. <br />
         그 외의 문의사항은 언제든 아래 폼으로 연락주시길 바랍니다.</p>
-      </section>
+      </Description>
       
       <section className="contact-info">
-        <form action="" onSubmit={submitHandler}>
-          <table>
+        <ContactForm onSubmit={submitHandler}>
+          <ContactTable>
             <tbody>
             <tr>
               <th>
@@ -93,17 +99,15 @@ const Contact = () => {
               </td>
             </tr>
             </tbody>
-          </table> 
-
-          <button type="submit">제출</button>
-
-        </form>
+          </ContactTable> 
+          <SubmitButton type="submit">제출</SubmitButton>
+        </ContactForm>
       </section>
 
       <footer>
         &copy; 2021, SU-KYOUNG SHIN. ALL RIGHTS ARE RESERVED
       </footer>
-    </Main>
+    </MainWrapper>
   );
 };
 

@@ -1,13 +1,14 @@
 import React from 'react';
-import './Home.css';
+import { HomeBgWrapper, HomeTextWrapper } from '../Styled';
+import bgImg from '../img/main.jpg';
 
 const Home = () => {
   return (
     <>
-    <div className="app-container-bg" style={{backgroundImage:'url(/assets/main.jpg)'}}></div>
-    <div className="app-container-text">
+    <HomeBgWrapper bgImg={bgImg} />
+    <HomeTextWrapper>
       <h1>Hi, I'm Frontend Developer</h1>
-    </div>
+    </HomeTextWrapper>
     </>
   );
 };

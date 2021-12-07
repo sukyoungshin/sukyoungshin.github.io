@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ModalNavList, ModalWrapper } from '../Styled';
+import { ModalWrapper, ModalNavList } from '../Styled';
 
 const ModalCategories = [
   {
@@ -46,7 +46,12 @@ const Modal = ({ modalHandler }) => {
         <footer>
           {/* &copy; 2021, SU-KYOUNG SHIN. ALL RIGHTS ARE RESERVED */}
           신수경 / 010-8949-6027 / 
-          <a href="https://github.com/sukyoungshin" target="_blank" rel="noreferrer" title="깃허브 바로가기"> GitHub</a>
+          <a 
+            href="https://github.com/sukyoungshin" 
+            target="_blank" 
+            rel="noreferrer" 
+            title="깃허브 바로가기"
+          > GitHub</a>
         </footer>
       </nav>
     </ModalWrapper>
