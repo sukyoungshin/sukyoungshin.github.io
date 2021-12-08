@@ -1,49 +1,49 @@
 import React from 'react';
-import './ProjectIntroduce.css';
+import { ProjectWrapper, ProjectImgWrapper, ProjectContentWrapper, ProjectName, ProjectStack, ProjectURL, ProjectDescription, HightLight } from '../Styled';
 
 const ProjectIntroduce = ({ projectContent }) => {
 
   return (
-      <div className="project-detail-wrapper">
-      <div className="project-image-wrapper">
+    <ProjectWrapper>
+      <ProjectImgWrapper>
         <ul>
         {
           projectContent.img.map((image, idx) => (
             <li key={idx}>
-              <img src={image} alt="사진" />
+              <img src={image} alt={`프로젝트 ${idx}번째 이미지`} />
             </li>
           ))
         }
         </ul>
-      </div>
-      <div className="project-content-wrapper">
-        <div className="project-title">
+      </ProjectImgWrapper>
+      <ProjectContentWrapper>
+        <ProjectName>
           <h3>1. 프로젝트명 </h3>
           <p>{projectContent.title}</p>
-        </div>
-        <div className="project-stack">
+        </ProjectName>
+        <ProjectStack>
           <h3>2. 사용한 기술</h3>
           <ul>
             {
               projectContent.techStack.map((stack, idx) => (
                 <li key={idx}>
-                  <span className="hightlight hashtag">{stack}</span>
+                  <HightLight>{stack}</HightLight>
                 </li>
               ))
             }
           </ul>
-        </div>
-        <div className="project-code">
+        </ProjectStack>
+        <ProjectURL>
           <h3>3. 링크</h3>
           <ul>
             <li>
-              <a href={projectContent.url.github} target="_blank" rel="noreferrer">깃허브 코드</a>
-              &nbsp;/&nbsp;
-              <a href={projectContent.url.live} target="_blank" rel="noreferrer">라이브 데모</a>
+              <a href={projectContent.url.live} target="_blank" rel="noreferrer">LIVE DEMO</a>
+              {' '} / {' '}
+              <a href={projectContent.url.github} target="_blank" rel="noreferrer">GitHub 코드</a>
             </li>
           </ul>
-        </div>
-        <div className="project-description">
+        </ProjectURL>
+        <ProjectDescription>
           <h3>4. 주요기능</h3>
           <ul>
             {
@@ -54,9 +54,9 @@ const ProjectIntroduce = ({ projectContent }) => {
               ))
             }
           </ul>
-        </div>
-      </div>
-    </div>
+        </ProjectDescription>
+      </ProjectContentWrapper>
+    </ProjectWrapper>
   );
 };
 

@@ -53,9 +53,14 @@ export const GlobalStyle = createGlobalStyle`
     --color-white: #F2F2F2;
     --color-grey-light: #BFBFBF; 
     --color-grey-dark: #524b4b;
+    --color-grey-darkest: #595959;
     --color-black-light: #333333;
     --color-black-dark: #2b2b2b;
     --color-pink: #F23D5E; 
+    
+    --color-pink-opacity: #f23d5ed3;
+    --color-black-opacity: rgba(191, 183, 176, 0.2);
+    --color-black-dimmed: rgba(0, 0, 0, 0.8);
 
     --font-size-32 : 32px;
     --font-size-24: 24px;
@@ -94,15 +99,17 @@ export const MenuIcon = styled.div`
   right: 16px;
   z-index: 9999;
 
+  transition: background-color 0.4s;;
+
   &:hover {
-    background: var(--color-pink); /* modify later */
+    background-color: var(--color-pink); 
   }
 
   span {
     display: inline-block;
     width: 24px;
     height: 2px;
-    background: #F2F2F2;
+    background-color: var(--color-white);
     border-radius: 4px;
     
     position: relative;
@@ -113,7 +120,7 @@ export const MenuIcon = styled.div`
       display: inline-block;
       width: 24px;
       height: 2px;
-      background: #F2F2F2;
+      background-color: var(--color-white);
       border-radius: 4px;
     } 
     &::before {
@@ -129,10 +136,9 @@ export const MenuIcon = styled.div`
 
 // Modal
 export const ModalWrapper = styled.aside`
-  // modal bg
   width: 360px;
   height: 640px;
-  background: rgba(0, 0, 0, 0.8);
+  background-color: var(--color-black-dimmed);
 
   position: relative;
   z-index: 9998;
@@ -145,8 +151,8 @@ export const ModalWrapper = styled.aside`
     top: 0px;
     right: 0;
     
-    background: #595959;
     color: var(--color-white);
+    background-color: var(--color-grey-darkest);
   }
 
   footer {
@@ -173,9 +179,7 @@ export const ModalWrapper = styled.aside`
 `;
 export const ModalNavList = styled.ul`
   margin: 80px 0;
-  padding: 0;
   width: 100%;
-  list-style: none;
 
   text-align: right;
   font-size: var(--font-size-24);
@@ -192,10 +196,10 @@ export const ModalNavList = styled.ul`
     a:focus {
       display: block;
       color: var(--color-white);
+      transition: color 0.5s;
       
       &:hover {
         color: var(--color-pink);
-        transition: all 0.5s;
       }
     }
   }
@@ -301,7 +305,7 @@ export const HomeBgWrapper = styled.div`
     
     width: 220px;
     height: 340px;
-    border: 2px solid #BFBFBF;
+    border: 2px solid var(--color-grey-light);
     
     position: absolute;
     top: -10px;
@@ -376,6 +380,7 @@ export const MainSection = styled.section`
   h3 {
     margin: 0;
     font-size: var(--font-size-16);
+    font-weight: 500;
   }
 
   ul {
@@ -389,6 +394,126 @@ export const MainSection = styled.section`
   }
 `;
 
+// Project
+export const ProjectWrapper = styled.section`
+  height: calc(100% - 192px);
+`;
+export const ProjectImgWrapper = styled.article`
+  width: 100%;
+  height: 20%;
+  overflow: hidden;
+
+  ul {
+    width: 100%;
+    height: 100%;
+
+    display: inline-flex;
+    flex-direction: row;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`;
+export const ProjectContentWrapper = styled.article`
+  margin: 8px 0 0 0;
+  padding: 8px;
+  width: 100%;
+  height: 80%;
+
+  position: relative;
+
+  display: inline-flex;
+  flex-direction: column;
+  grid-gap: 8px;
+
+  h3 {
+    font-size: var(--font-size-14);
+    font-weight: 500;
+  }
+  ul {
+    margin: 8px 0;
+    font-size: var(--font-size-12);
+
+    display: inline-flex;
+    flex-direction: column;
+    grid-gap: 2px;
+  }
+`;
+export const ProjectName = styled.div`
+  height: fit-content;
+
+  p {
+    margin: 8px 0;
+  }
+`;
+export const ProjectStack = styled.div`
+  height: fit-content;
+
+  ul {
+    margin: 8px 0;
+
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-gap: 8px;
+
+    font-size: var(--font-size-14);
+  }
+
+`;
+export const ProjectURL = styled.div`
+  margin: 0;
+  height: fit-content;
+`;
+export const ProjectDescription = styled.div`
+  flex: 1; /* flex 1칸 전체를 차지하도록 */
+  overflow-y: auto;
+
+  /* custom scroll바 */
+  &::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar-track{
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb{
+    background-color: var(--color-grey-light);
+  }
+
+  li::before {
+    content: '· ';
+    display: inline-block;
+    margin-right: 4px;
+  }
+`;
+
+// Project Pagination
+export const PaginationWrapper = styled.section`
+  width: 100%;
+  height: 32px;
+
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+export const PaginationButton = styled.button`
+  width: 24px;
+  height: 24px;
+  font-size: var(--font-size-16);
+
+  color: var(--color-white);
+  background-color: transparent;
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-pink);
+  }
+`;
+
+
 // Contact
 export const ContactForm = styled.form`
   width: 100%;
@@ -400,9 +525,10 @@ export const ContactTable = styled.table`
   tr {
     width: 100%;
     height: 40px;
+
     display: table;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
     border-collapse: collapse;
+    border-bottom: 1px solid var(--color-black-opacity);
   }
   th, td {
     padding: 0;
@@ -446,19 +572,24 @@ export const SubmitButton = styled.button`
 
   &:hover {
     color: var(--color-white);
-    background-color: #f23d5ed3;
+    background-color: var(--color-pink-opacity);
   }
 `;
+
 
 // SPAN STYLE
 export const Span = styled.span`
   font-size: var(--font-size-12);
+
+  .pink {
+    color: var(--color-pink);
+  }
 `;
 export const HightLight = styled(Span)`
   display: inline-block;
   padding: 0px 4px;
   border-radius: 4px;
-  background-color: rgba(191, 183, 176, 0.2);
+  background-color: var(--color-black-opacity);
 `;
 export const Bold = styled(Span)`
   font-weight: bold;

@@ -7,7 +7,7 @@ const Home = () => {
     <>
     <HomeBgWrapper bgImg={bgImg} />
     <HomeTextWrapper>
-      <h1>Hi, I'm Frontend Developer</h1>
+      <h1>Hi, I'm<br/> Frontend<br/> Developer</h1>
     </HomeTextWrapper>
     </>
   );

@@ -1,11 +1,8 @@
 import React from 'react';
-import './ProjectPagination.css';
+import { PaginationWrapper, PaginationButton, Span } from '../Styled';
 
 const ProjectPagination = ({ projectContent, projectIndex, setProjectIndex }) => {
-  
-  // projectIndex : 0, 1, 2     
-  // projectContent.length : 3 
-  // 0 <= projectIndex < 3
+
   const prevProjectHandler = () => {
     if (projectIndex <= 0) return;
     setProjectIndex(projectIndex - 1)
@@ -17,32 +14,30 @@ const ProjectPagination = ({ projectContent, projectIndex, setProjectIndex }) =>
   };
 
   return (
-    <section className="project-pagination">
+    <PaginationWrapper>
       {/* prev 버튼 */}
-      <button 
+      <PaginationButton 
         type="button" 
-        className="left-arrow"
         onClick={prevProjectHandler}
       >
         &#8636;
-      </button>
+      </PaginationButton>
 
       {/* 현재 페이지 / 전체 프로젝트 갯수 */}
-      <span>
+      <Span>
         <span className="pink">{projectIndex + 1}</span>
-        &nbsp;/&nbsp;
+        {' '} / {' '}
         {projectContent.length}
-      </span>
+      </Span>
 
       {/* next 버튼 */}
-      <button 
+      <PaginationButton 
         type="button" 
-        className="right-arrow"
         onClick={nextProjectHandler}
       >
         &#8640;
-      </button>
-    </section>
+      </PaginationButton>
+    </PaginationWrapper>
   );
 };
 
