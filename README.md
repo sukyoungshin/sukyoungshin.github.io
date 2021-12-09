@@ -10,10 +10,11 @@ React를 이용하여 만든 개인 포트폴리오 앱 입니다.
 - Contact: 폼 제출 시, 연동된 google sheet에 입력된 데이터를 POST전송 (API활용) <br/>
 
 
-### Dependencies
+### Doc
 
-- ⚙ 패키지매니저 : yarn install
-- 🔨 Dependencies : `react` `axios` `react-icons` `react-router(v5)` `styled-components` `반응형`
+- yarn install
+- node -v : 16.13.0
+- tool: `react` `axios` `react-icons` `react-router(v5)` `styled-components` `반응형`
 
 ```
 "dependencies": {
