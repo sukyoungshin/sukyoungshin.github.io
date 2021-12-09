@@ -79,7 +79,7 @@ const Contact = () => {
                 <label htmlFor="usercontact">연락처</label>
               </th>
               <td>
-                <input type="text" id="usercontact" name="usercontact" value={usercontact} onChange={changeHandler} placeholder="010 0000 0000" required />
+                <input type="number" id="usercontact" name="usercontact" value={usercontact} onChange={changeHandler} placeholder="010 0000 0000" required />
               </td>
             </tr>
             <tr>
