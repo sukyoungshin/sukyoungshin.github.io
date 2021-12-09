@@ -27,7 +27,7 @@ export const projectContent = [
       ]
   }, {
     id: 2,
-    title: 'Movie 앱웹🎬',
+    title: 'Movie 앱웹 🎬',
     img: [
       'https://cdn.pixabay.com/photo/2021/10/04/16/42/dog-6680642_960_720.jpg', 
       'https://cdn.pixabay.com/photo/2021/10/04/09/20/animal-6679843_960_720.jpg',
@@ -36,7 +36,9 @@ export const projectContent = [
     techStack: [
       'React',
       'React-router',
+      'Prop-types',
       'Styled-components',
+      'React-icons',
       'API'
     ],
     url: {
