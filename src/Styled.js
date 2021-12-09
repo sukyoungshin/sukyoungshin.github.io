@@ -328,7 +328,7 @@ export const HomeTextWrapper = styled.div`
       content: '';
       display: inline-block;
       
-      width: 160px;
+      width: 140px;
       height: 47px;
 
       position: absolute;
