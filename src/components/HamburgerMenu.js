@@ -1,10 +1,10 @@
 import React from 'react';
 import { MenuIcon } from '../Styled';
 
-const HamburgerMenu = ({ modalHandler }) => {
+const HamburgerMenu = ({ modal, modalHandler }) => {
 
   return (
-    <MenuIcon onClick={modalHandler}>
+    <MenuIcon modal={modal} onClick={modalHandler}>
       <span></span>
     </MenuIcon>
   );

@@ -99,20 +99,21 @@ export const MenuIcon = styled.div`
   right: 16px;
   z-index: 9999;
 
-  transition: background-color 0.4s;;
+  transition: background-color 0.3s;;
 
   &:hover {
-    background-color: var(--color-pink); 
+    background-color: var(--color-black-opacity); 
   }
 
   span {
     display: inline-block;
     width: 24px;
     height: 2px;
-    background-color: var(--color-white);
+    background-color: ${props => props.modal ? 'transparent' : 'var(--color-white)'};
     border-radius: 4px;
     
     position: relative;
+    transition: all 0.2s;
 
     &::before,
     &::after {
@@ -125,11 +126,13 @@ export const MenuIcon = styled.div`
     } 
     &::before {
       position: absolute;
-      top: 8px;
+      top: ${props => props.modal ? '0px' : '8px'};
+      transform: ${props => props.modal && 'rotate(-45deg)'};
     }
     &::after {
       position: absolute;
-      bottom: 8px;
+      bottom: ${props => props.modal ? '0px' : '8px'};
+      transform: ${props => props.modal && 'rotate(45deg)'};
     }
   }
 `;
@@ -181,12 +184,13 @@ export const ModalNavList = styled.ul`
   margin: 80px 0;
   width: 100%;
 
-  text-align: right;
   font-size: var(--font-size-24);
 
   display: inline-flex;
   flex-direction: column;
+  align-items: flex-end;
   grid-gap: 16px;
+  gap: 16px;
 
   li {
     padding: 0 32px 0 0;
@@ -196,10 +200,11 @@ export const ModalNavList = styled.ul`
     a:focus {
       display: block;
       color: var(--color-white);
-      transition: color 0.5s;
-      
+      border-bottom: 3px solid transparent;
+      transition: border-bottom 0.3s;
+
       &:hover {
-        color: var(--color-pink);
+        border-bottom: 3px solid var(--color-black-opacity);
       }
     }
   }
@@ -366,6 +371,7 @@ export const AboutHashtagSection = styled.section`
 
   h3 {
     font-size: var(--font-size-14);
+    
   }
   ul {
     display: inline-flex;
@@ -513,6 +519,20 @@ export const PaginationButton = styled.button`
   }
 `;
 
+// Project ImgModal
+export const ProjectDetailWrapper = styled.div`
+  width: 100%;
+  height: 460px;
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+`;
 
 // Contact
 export const ContactForm = styled.form`
@@ -563,11 +583,11 @@ export const ContactTable = styled.table`
     font-size: var(--font-size-12);
     background-color: var(--color-black-dark);
   }
-
 `;
 export const SubmitButton = styled.button`
   width: 100%;
   height: 40px;
+  font-size: var(--font-size-12);
   transition: all 0.2s;
 
   &:hover {
@@ -575,7 +595,14 @@ export const SubmitButton = styled.button`
     background-color: var(--color-pink-opacity);
   }
 `;
-
+export const CloseButton = styled(SubmitButton)`
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 8px;
+  gap: 8px;
+`;
 
 // SPAN STYLE
 export const Span = styled.span`

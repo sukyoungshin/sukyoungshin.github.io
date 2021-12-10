@@ -5,7 +5,6 @@ import { projectContent } from '../utilities/projectContent'; // DATA
 import { MainWrapper, Description } from '../Styled'; // STYLE
 
 const Project = () => {
-
   const [ projectIndex, setProjectIndex ] = useState(0); // 프로젝트 배열 index#
 
   return (

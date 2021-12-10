@@ -1,7 +1,7 @@
 export const projectContent = [
   {
     id: 1,
-    title: '써브웨이(Subway) 리뉴얼 웹사이트🥪',
+    title: '써브웨이(Subway) 리뉴얼 웹사이트',
     img: [
       'https://cdn.pixabay.com/photo/2021/10/04/16/42/dog-6680642_960_720.jpg', 
       'https://cdn.pixabay.com/photo/2021/10/04/09/20/animal-6679843_960_720.jpg',
@@ -19,15 +19,15 @@ export const projectContent = [
       'live': 'https://subway-renewal-mobile.netlify.app/',
     }, 
     feature: [
-      '회원가입 페이지 : 정규표현식(RegExp)', 
-      '주문 페이지 : 카카오맵API를 활용하여, 지도 위에 입력받은 주소지 좌표값과 키워드검색, 마커 기능구현',
-      '주문완료 페이지 : localStorage 활용',
+      '구글OAuth 로그인구현', 
+      '주문 페이지 : 카카오맵API를 활용하여, 지도 위에 입력받은 주소지 좌표값과 키워드검색 기능, 마커 및 인포윈도우 기능구현',
+      '주문 페이지 : localStorage 활용하여 브라우저에 주문정보 저장',
       '모바일뷰',
       '적응형 (차후 데스크탑뷰 만들어서 redirect 붙일 예정)'
       ]
   }, {
     id: 2,
-    title: 'Movie 앱웹 🎬',
+    title: 'Movie 앱웹',
     img: [
       'https://cdn.pixabay.com/photo/2021/10/04/16/42/dog-6680642_960_720.jpg', 
       'https://cdn.pixabay.com/photo/2021/10/04/09/20/animal-6679843_960_720.jpg',
@@ -51,7 +51,7 @@ export const projectContent = [
       ]
   }, {
     id: 3,
-    title: '모멘텀 Momentum 🧭',
+    title: '모멘텀 Momentum',
     img: [
       'https://cdn.pixabay.com/photo/2021/10/04/16/42/dog-6680642_960_720.jpg', 
       'https://cdn.pixabay.com/photo/2021/10/04/09/20/animal-6679843_960_720.jpg',
@@ -78,7 +78,7 @@ export const projectContent = [
       ]
   }, {
     id: 4,
-    title: 'MBTI 나와 찰떡인 LOL챔피언은? 🧐',
+    title: 'MBTI 나와 찰떡인 LOL챔피언은?',
     img: [
       'https://cdn.pixabay.com/photo/2021/10/04/16/42/dog-6680642_960_720.jpg', 
       'https://cdn.pixabay.com/photo/2021/10/04/09/20/animal-6679843_960_720.jpg',
@@ -98,6 +98,4 @@ export const projectContent = [
       '반응형 작업',
       ]
   }, 
-
 ];
-

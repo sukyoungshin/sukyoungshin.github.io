@@ -38,13 +38,12 @@ const Modal = ({ modalHandler }) => {
                   onClick={modalHandler}
                 >
                   {category.categoryName}
-                  </Link>
+                </Link>
               </li>
             ))
           }
         </ModalNavList>
         <footer>
-          {/* &copy; 2021, SU-KYOUNG SHIN. ALL RIGHTS ARE RESERVED */}
           신수경 / 010-8949-6027 / 
           <a 
             href="https://github.com/sukyoungshin" 

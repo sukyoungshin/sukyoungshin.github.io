@@ -39,7 +39,7 @@ const Contact = () => {
       <h2>Contact</h2>
       <Description>
         <p>
-          이력서와 자기소개서는&nbsp;
+          이력서와 자기소개서는{' '}
           <a 
             href="https://www.notion.so/8e50ff3d1f934c378982a264f27e307e" 
             target="_blank" 

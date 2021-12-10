@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { ProjectWrapper, ProjectImgWrapper, ProjectContentWrapper, ProjectName, ProjectStack, ProjectURL, ProjectDescription, HightLight } from '../Styled';
 
 const ProjectIntroduce = ({ projectContent }) => {
@@ -9,9 +10,15 @@ const ProjectIntroduce = ({ projectContent }) => {
         <ul>
         {
           projectContent.img.map((image, idx) => (
-            <li key={idx}>
-              <img src={image} alt={`프로젝트 ${idx}번째 이미지`} />
-            </li>
+            <Link 
+              key={idx} 
+              to={`/img/${idx}`}
+              state={{ imageURL : image, projectContent : projectContent }}
+            >
+              <li>
+                <img src={image} alt={`프로젝트 ${idx}번째 이미지`} />
+              </li>
+            </Link>
           ))
         }
         </ul>
@@ -25,11 +32,13 @@ const ProjectIntroduce = ({ projectContent }) => {
           <h3>2. 사용한 기술</h3>
           <ul>
             {
-              projectContent.techStack.map((stack, idx) => (
-                <li key={idx}>
-                  <HightLight>{stack}</HightLight>
-                </li>
-              ))
+              projectContent.techStack.map(
+                (stack, idx) => (
+                  <li key={idx}>
+                    <HightLight>{stack}</HightLight>
+                  </li>
+                )
+              )
             }
           </ul>
         </ProjectStack>
