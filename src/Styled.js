@@ -423,7 +423,6 @@ export const ProjectImgWrapper = styled.article`
 `;
 export const ProjectContentWrapper = styled.article`
   margin: 8px 0 0 0;
-  padding: 8px;
   width: 100%;
   height: 80%;
 
