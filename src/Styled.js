@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
 
 /**************
   GLOBAL-STYLE
@@ -379,6 +379,9 @@ export const AboutHashtagSection = styled.section`
     align-items: flex-start;  
     justify-content: center;
   }
+  li {
+    line-height: 1.3rem;
+  }
 `;
 
 // Experience
@@ -487,6 +490,10 @@ export const ProjectDescription = styled.div`
     background-color: var(--color-grey-light);
   }
 
+  li {
+    line-height: 1.3rem;
+  }
+
   li::before {
     content: '· ';
     display: inline-block;
@@ -589,10 +596,10 @@ export const SubmitButton = styled.button`
   font-size: var(--font-size-12);
   transition: all 0.2s;
 
-  &:hover {
+  ${(props) => props.isSubmitted && css`
     color: var(--color-white);
     background-color: var(--color-pink-opacity);
-  }
+  `}
 `;
 export const CloseButton = styled(SubmitButton)`
   display: inline-flex;

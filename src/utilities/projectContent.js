@@ -25,32 +25,9 @@ export const projectContent = [
       '모바일뷰',
       '적응형 (차후 데스크탑뷰 만들어서 redirect 붙일 예정)'
       ]
-  }, {
+  }, 
+  {
     id: 2,
-    title: 'Movie 앱웹',
-    img: [
-      'https://cdn.pixabay.com/photo/2021/10/04/16/42/dog-6680642_960_720.jpg', 
-      'https://cdn.pixabay.com/photo/2021/10/04/09/20/animal-6679843_960_720.jpg',
-      'https://cdn.pixabay.com/photo/2021/10/04/16/42/dog-6680642_960_720.jpg'
-    ],
-    techStack: [
-      'React',
-      'React-router',
-      'Prop-types',
-      'Styled-components',
-      'React-icons',
-      'API'
-    ],
-    url: {
-      'github': 'https://github.com/sukyoungshin/movie-app', 
-      'live': 'https://fakeflix-movie-app.netlify.app/',
-    }, 
-    feature: [
-      '(추가예정)',
-      '반응형'
-      ]
-  }, {
-    id: 3,
     title: '모멘텀 Momentum',
     img: [
       'https://cdn.pixabay.com/photo/2021/10/04/16/42/dog-6680642_960_720.jpg', 
@@ -76,8 +53,9 @@ export const projectContent = [
       '다크모드 기능 (localStorage 사용)',
       '뮤직 플레이어',
       ]
-  }, {
-    id: 4,
+  }, 
+  {
+    id: 3,
     title: 'MBTI 나와 찰떡인 LOL챔피언은?',
     img: [
       'https://cdn.pixabay.com/photo/2021/10/04/16/42/dog-6680642_960_720.jpg', 
