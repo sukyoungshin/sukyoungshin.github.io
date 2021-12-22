@@ -54,7 +54,7 @@ const About = () => {
       <AboutIntroSection>
         <p className="greet">안녕하세요!</p> 
         <p>
-          프론트앤드 개발자가 되기 위해, 
+          프론트엔드 개발자가 되기 위해, 
           국비 과정(3개월) 및 일반과정(6개월)을 수료하였으며 
           HTML, CSS, JavaScript, React js를 학습하였습니다. 
         </p>
