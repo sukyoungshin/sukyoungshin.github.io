@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Main, About, Experience, Project, ImgModal, Contact, NoMatch } from './pages'
 import { Layout } from './components/index';
-import { GlobalStyle } from './styles/GlobalStyle';
+import { GlobalStyle } from './styles/globalstyle';
 
 const App = () => {
 
