@@ -14,6 +14,14 @@ export const StyledArticleImgWrapper = styled.article`
 
     display: inline-flex;
     flex-direction: row;
+
+    a {
+      width: 100%;
+    }
+    li {
+      width: 100%;
+      height: 100%;
+    }
   }
   img {
     width: 100%;

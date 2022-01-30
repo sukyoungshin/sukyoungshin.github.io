@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const MainWrapper = styled.main`
+export const StyledMainWrapper = styled.main`
   padding: 16px;
   width: 100%;
   height: 100%;
@@ -9,6 +9,8 @@ export const MainWrapper = styled.main`
   position: absolute;
   top: 0;
   left: 0;
+
+  overflow: auto;
 
   h2 {
     margin: 40px 0 0 0px;
@@ -37,7 +39,8 @@ export const MainWrapper = styled.main`
     bottom: 0;
   }
 `;
-export const Description = styled.section`
+
+export const StyledSectionDescription = styled.section`
   margin: 0;
   padding: 8px 0;
   width: 100%;
@@ -80,21 +83,21 @@ export const Description = styled.section`
   }
 `;
 
-export const ProjectDetailWrapper = styled.div`
+export const StyledDivDetail = styled.div`
   width: 100%;
-  height: 460px;
 
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
+  grid-gap: 8px;
+  gap: 8px;
 
   img {
     width: 100%;
-    aspect-ratio: 16 / 9;
   }
 `;
 
-export const CloseButton = styled.button`
+export const StyledButtonClose = styled.button`
   width: 100%;
   height: 40px;
   font-size: var(--font-size-12);

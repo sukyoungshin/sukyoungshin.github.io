@@ -1,9 +1,8 @@
 import React from 'react';
-// Routes
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Main, About, Experience, Project, ImgModal, Contact, NoMatch } from './pages'
 import { Layout } from './components/index';
-import { GlobalStyle } from './styles/globalstyle';
+import { GlobalStyle } from './styles/globalStyle';
 
 const App = () => {
 

@@ -3,7 +3,7 @@ export const projectDatas = [
     id: 1,
     title: '써브웨이(Subway) 리뉴얼 웹사이트',
     img: [
-      'https://cdn.pixabay.com/photo/2021/10/04/16/42/dog-6680642_960_720.jpg', 
+      'https://github.com/sukyoungshin/sukyoungshin.github.io/blob/main/src/img/subway/userflow1_order.gif?raw=true', 
       'https://cdn.pixabay.com/photo/2021/10/04/09/20/animal-6679843_960_720.jpg',
       'https://cdn.pixabay.com/photo/2021/10/04/09/20/animal-6679843_960_720.jpg',
     ],

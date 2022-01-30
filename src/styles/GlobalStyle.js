@@ -45,7 +45,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${FONT.DEFAULT}, ${FONT.EN};
     -webkit-font-smoothing: antialiased;
   }
-
   html {
     --color-white: ${PALETTE.WHITE};
     --color-grey-light: ${PALETTE.GREY_LIGHT}; 

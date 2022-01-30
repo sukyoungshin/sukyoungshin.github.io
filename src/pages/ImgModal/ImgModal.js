@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useNavigate, useParams, useLocation } from "react-router-dom";
-import { MainWrapper, Description, ProjectDetailWrapper, CloseButton } from './ImgModal.style';
+import { StyledMainWrapper, StyledSectionDescription, StyledDivDetail, StyledButtonClose } from './ImgModal.style';
 import { MdOutlineClose } from "react-icons/md";
 
 const ImgModal = () => {
@@ -8,38 +8,41 @@ const ImgModal = () => {
   const location = useLocation();
   const { id } = useParams();
   const buttonRef = useRef(null);
-
   const onDismiss = () => navigate(-1);
-
-  console.log(location.state)
+  const { imageURL } = location.state;
+  const { title } = location.state.projectDatas;
 
   return (
-      <MainWrapper>
+      <StyledMainWrapper>
         <h2>Project image</h2>
 
-        <Description>
+        <StyledSectionDescription>
           <p>
-            {location.state.projectDatas.title}의 {id}번째 이미지입니다. 
+            {title} 상세 이미지입니다. 
           </p>
-        </Description>
+        </StyledSectionDescription>
 
-        <ProjectDetailWrapper>
+        <StyledDivDetail>
           <img 
-            src={location.state.imageURL} 
-            alt='프로젝트 상세 이미지' 
+            src={imageURL} 
+            alt={`${title} - ${id}번째 이미지`} 
           />
+          <CloseButton buttonRef={buttonRef} onDismiss={onDismiss} />
+        </StyledDivDetail>
 
-          <CloseButton
-            ref={buttonRef}
-            onClick={onDismiss}
-          >
-            <MdOutlineClose />
-            <span>CLOSE</span>
-          </CloseButton>
+    </StyledMainWrapper>
+  );
+};
 
-        </ProjectDetailWrapper>
-
-    </MainWrapper>
+const CloseButton = ({ buttonRef, onDismiss }) => {
+  return (
+    <StyledButtonClose
+      ref={buttonRef}
+      onClick={onDismiss}
+    >
+      <MdOutlineClose />
+      <span>CLOSE</span>
+    </StyledButtonClose>
   );
 };
 
