@@ -8,8 +8,8 @@ const App = () => {
 
   return (
     <>
-    <GlobalStyle />
     <BrowserRouter>
+    <GlobalStyle />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
