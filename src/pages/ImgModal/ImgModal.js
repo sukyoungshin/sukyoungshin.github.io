@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useNavigate, useParams, useLocation } from "react-router-dom";
-import { MainWrapper, Description, ProjectDetailWrapper, CloseButton } from '../Styled';
+import { MainWrapper, Description, ProjectDetailWrapper, CloseButton } from './ImgModal.style';
 import { MdOutlineClose } from "react-icons/md";
 
 const ImgModal = () => {
@@ -11,13 +11,15 @@ const ImgModal = () => {
 
   const onDismiss = () => navigate(-1);
 
+  console.log(location.state)
+
   return (
       <MainWrapper>
         <h2>Project image</h2>
 
         <Description>
           <p>
-            {location.state.projectContent.title}의 {id}번째 이미지입니다. 
+            {location.state.projectDatas.title}의 {id}번째 이미지입니다. 
           </p>
         </Description>
 

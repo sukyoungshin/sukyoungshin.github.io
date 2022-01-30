@@ -1,7 +1,7 @@
 import React from 'react';
 import { SiGithub } from 'react-icons/si';
-import { MainWrapper, Description, AboutIntroSection, AboutHashtagSection, HashTag } from '../Styled';
-import ProfileImg from '../img/profile.png';
+import { StyledMain, StyledSectionDescription, StyledIntroduceSection, StyledHashtagSection, StyledHashTag } from './About.style';
+import ProfileImg from '../../img/profile.png';
 
 const Hashtags = [
   {
@@ -20,9 +20,9 @@ const Hashtags = [
 
 const About = () => {
   return (
-    <MainWrapper>
+    <StyledMain>
       <h2>About me</h2>
-      <Description>
+      <StyledSectionDescription>
         <img src={ProfileImg} alt="프로필사진" />
         <ul>
           <li>
@@ -45,13 +45,14 @@ const About = () => {
               target="_blank" 
               rel="noreferrer" 
               title="깃허브로 이동하기"
+              className='anchor_github'
             >
               github <SiGithub />
             </a> 
           </li>
         </ul>
-      </Description>
-      <AboutIntroSection>
+      </StyledSectionDescription>
+      <StyledIntroduceSection>
         <p className="greet">안녕하세요!</p> 
         <p>
           프론트엔드 개발자가 되기 위해, 
@@ -68,18 +69,18 @@ const About = () => {
           약 3년간 글로벌기업에서 서비스담당자로 근무하며 영문 구글링을 통해 문제를 해결했던 경험이 있습니다. 
           필요한 문서를 빠르게 찾고 StackOverflow나 공식Document의 원문을 볼 수 있는 강점을 갖추고 있습니다.
         </p>
-      </AboutIntroSection>
-      <AboutHashtagSection>
+      </StyledIntroduceSection>
+      <StyledHashtagSection>
         <h3>저는 이런 개발자입니다.</h3>
         <ul>
           {Hashtags.map((hashtag) => (
             <li key={hashtag.id}>
-              <HashTag>{hashtag.description}</HashTag>
+              <StyledHashTag>{hashtag.description}</StyledHashTag>
             </li>
           ))}
         </ul>
-      </AboutHashtagSection>
-    </MainWrapper>
+      </StyledHashtagSection>
+    </StyledMain>
   );
 };
 

@@ -1,30 +1,29 @@
 import React, { useState } from 'react';
-import ProjectIntroduce from '../components/ProjectIntroduce';
-import ProjectPagination from '../components/ProjectPagination';
-import { projectContent } from '../utilities/projectContent'; // DATA
-import { MainWrapper, Description } from '../Styled'; // STYLE
+import { ProjectIntroduce, ProjectPagination } from '../../components';
+import { projectDatas } from '../../mock/ProjectDatas';
+import { StyledMainWrapper, StyledSectionDescription } from './Project.style';
 
 const Project = () => {
   const [ projectIndex, setProjectIndex ] = useState(0); // 프로젝트 배열 index#
 
   return (
-    <MainWrapper>
+    <StyledMainWrapper>
       <h2>Project</h2>
 
-      <Description>
+      <StyledSectionDescription>
         <p>다음과 같은 프로젝트를 진행했습니다.</p>
-      </Description>
+      </StyledSectionDescription>
 
       <ProjectIntroduce 
-        projectContent={projectContent[projectIndex]} 
+        projectDatas={projectDatas[projectIndex]} 
       />
 
       <ProjectPagination 
-        projectContent={projectContent} 
+        projectDatas={projectDatas} 
         projectIndex={projectIndex}
         setProjectIndex={setProjectIndex}
       />
-    </MainWrapper>
+    </StyledMainWrapper>
   );
 };
 

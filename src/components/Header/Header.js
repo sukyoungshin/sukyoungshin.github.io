@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import HamburgerMenu from './HamburgerMenu';
-import Modal from './Modal';
+import { HamburgerIcon, SideMenu } from '../index';
 
 const Header = () => {
   const [ modal, setModal ] = useState(false); // when : (true)모달OPEN, (false)모달close
@@ -10,11 +9,10 @@ const Header = () => {
 
   return (
     <>
-      <HamburgerMenu modal={modal} modalHandler={modalHandler} />
-      {/* 메뉴 모달팝업 */}
+      <HamburgerIcon modal={modal} modalHandler={modalHandler} />
       {
         modal 
-        ? <Modal modalHandler={modalHandler} />
+        ? <SideMenu modalHandler={modalHandler} />
         : null
       }
     </>

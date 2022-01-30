@@ -1,4 +1,4 @@
-export const projectContent = [
+export const projectDatas = [
   {
     id: 1,
     title: '써브웨이(Subway) 리뉴얼 웹사이트',
@@ -10,8 +10,9 @@ export const projectContent = [
     techStack: [
       'React',
       'React-router',
-      'ContextAPI',
-      '구글OAuth',
+      'Redux',
+      'Styled-components',
+      '구글/카카오OAuth',
       '카카오맵API'
     ],
     url: {
@@ -19,11 +20,11 @@ export const projectContent = [
       'live': 'https://subway-renewal-mobile.netlify.app/',
     }, 
     feature: [
-      '구글OAuth 로그인구현', 
+      '구글/카카오OAuth 로그인구현', 
       '주문 페이지 : 카카오맵API를 활용하여, 지도 위에 입력받은 주소지 좌표값과 키워드검색 기능, 마커 및 인포윈도우 기능구현',
-      '주문 페이지 : localStorage 활용하여 브라우저에 주문정보 저장',
+      'SplashScreen : localStorage 활용하여 브라우저에 저장',
+      '주문 페이지 : Redux 활용하여 주문정보 전역관리',
       '모바일뷰',
-      '적응형 (차후 데스크탑뷰 만들어서 redirect 붙일 예정)'
       ]
   }, 
   {
@@ -51,7 +52,6 @@ export const projectContent = [
       '투두리스트 (localStorage 사용)',
       '사용자의 위치와 온도 나타내기 (API사용)',
       '다크모드 기능 (localStorage 사용)',
-      '뮤직 플레이어',
       ]
   }, 
   {

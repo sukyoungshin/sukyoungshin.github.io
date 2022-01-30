@@ -1,14 +1,14 @@
 import React from 'react';
-import { PaginationWrapper, PaginationButton, Span } from '../Styled';
+import { PaginationWrapper, PaginationButton, Span } from './ProjectPagination.style';
 
-const ProjectPagination = ({ projectContent, projectIndex, setProjectIndex }) => {
+const ProjectPagination = ({ projectDatas, projectIndex, setProjectIndex }) => {
 
   const prevProjectHandler = () => {
     if (projectIndex <= 0) return;
     setProjectIndex(projectIndex - 1)
   };
   const nextProjectHandler = () => {
-    if (projectIndex < projectContent.length - 1) {
+    if (projectIndex < projectDatas.length - 1) {
       setProjectIndex(projectIndex + 1);
     } 
   };
@@ -27,7 +27,7 @@ const ProjectPagination = ({ projectContent, projectIndex, setProjectIndex }) =>
       <Span>
         <span className="pink">{projectIndex + 1}</span>
         {' '} / {' '}
-        {projectContent.length}
+        {projectDatas.length}
       </Span>
 
       {/* next 버튼 */}

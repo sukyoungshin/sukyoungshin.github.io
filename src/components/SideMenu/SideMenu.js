@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ModalWrapper, ModalNavList } from '../Styled';
+import { StyledAside, StyledUl } from './SideMenu.style';
 
 const ModalCategories = [
   {
@@ -25,11 +25,11 @@ const ModalCategories = [
   }
 ];
 
-const Modal = ({ modalHandler }) => {
+const SideMenu = ({ modalHandler }) => {
   return (
-    <ModalWrapper>      
+    <StyledAside>      
       <nav>
-        <ModalNavList>
+        <StyledUl>
           {
             ModalCategories.map((category) => (
               <li key={category.categoryName}>
@@ -42,7 +42,7 @@ const Modal = ({ modalHandler }) => {
               </li>
             ))
           }
-        </ModalNavList>
+        </StyledUl>
         <footer>
           신수경 / 010-8949-6027 / 
           <a 
@@ -53,8 +53,8 @@ const Modal = ({ modalHandler }) => {
           > GitHub</a>
         </footer>
       </nav>
-    </ModalWrapper>
+    </StyledAside>
   );
 };
 
-export default Modal;
+export default SideMenu;

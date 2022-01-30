@@ -1,11 +1,11 @@
 import React from 'react';
-import { MainWrapper } from '../Styled';
+import { StyledMain } from './NoMatch.style';
 
 const NoMatch = () => {
   return (
-    <MainWrapper>
+    <StyledMain>
       No Match
-    </MainWrapper>
+    </StyledMain>
   );
 };
 
