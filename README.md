@@ -2,15 +2,19 @@
 
 React를 이용하여 만든 개인 포트폴리오 앱 입니다.
 
-## PROJECT 소개
+## Summary
 
-🔗 URL : [LIVE DEMO](https://sukyoungshin.github.io/), [깃허브코드](https://github.com/sukyoungshin/githubpage)
+- 인원 : 개인프로젝트 (1인)
+- 기여 : 기획, 디자인, 프론트앤드
+- 작업기간 : 2021.10.<br/>
 
-### Features
-- Contact: 폼 제출 시, 연동된 google sheet에 입력된 데이터를 POST전송 (API활용) <br/>
+## Features
+- React-router을 적용하여 구현한 첫번째 SPA 애플리케이션
+- Sheet Best API를 활용하여 Contact 폼 내부에 입력된 데이터를 연동된 google sheet로 전송 (HTTP 서버통신)
+- gh-pages를 사용한 첫 배포
+- Figma를 활용하여 프로토타이핑 작업<br/>
 
-
-### Doc
+## Doc
 
 - yarn install
 - node -v : 16.13.0
@@ -33,6 +37,6 @@ React를 이용하여 만든 개인 포트폴리오 앱 입니다.
 },
 ```
 
-## 프로젝트 회고
-
-[프로젝트 진행하며 겪은 이슈정리](https://github.com/sukyoungshin/TIL/blob/main/Note/portfolio.md)
+## 🔗프로젝트 관련 링크
+- [프로젝트url](https://sukyoungshin.github.io/)
+- [프로젝트 진행하며 겪은 이슈정리](https://github.com/sukyoungshin/TIL/blob/main/Note/portfolio.md)
