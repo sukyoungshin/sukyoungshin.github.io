@@ -1,7 +1,7 @@
 import React from 'react';
 import { SiGithub } from 'react-icons/si';
 import { StyledMain, StyledSectionDescription, StyledIntroduceSection, StyledHashtagSection, StyledHashTag } from './About.style';
-import ProfileImg from '../../img/profile.png';
+import ProfileImg from 'img/profile.png';
 
 const Hashtags = [
   {

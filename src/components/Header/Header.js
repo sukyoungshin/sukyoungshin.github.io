@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HamburgerIcon, SideMenu } from '../index';
+import { HamburgerIcon, SideMenu } from 'components';
 
 const Header = () => {
   const [ modal, setModal ] = useState(false); // when : (true)모달OPEN, (false)모달close

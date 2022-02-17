@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header } from '../index';
+import { Header } from 'components';
 import { Outlet } from 'react-router';
 import { StyledLayoutWrapper } from './Layout.style';
 

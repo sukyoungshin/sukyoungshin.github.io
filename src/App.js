@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Main, About, Experience, Project, ImgModal, Contact, NoMatch } from './pages/index';
-import { Layout } from './components/index';
-import { GlobalStyle } from './styles/GlobalStyle';
+import { Main, About, Experience, Project, ImgModal, Contact, NoMatch } from 'pages';
+import { Layout } from 'components';
+import { GlobalStyle } from 'styles/GlobalStyle';
 
 const App = () => {
 

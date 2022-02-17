@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledBgWrapper, StyledTextWrapper } from './Main.style';
-import bgImg from '../../img/main.jpg';
+import bgImg from 'img/main.jpg';
 
 const Main = () => {
   return (

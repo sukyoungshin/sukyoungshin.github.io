@@ -29,7 +29,7 @@ const Contact = () => {
         그 외의 문의사항은 언제든 아래 폼으로 연락주시길 바랍니다.</p>
       </StyledSectionDescription>
       
-      <section className="contact-info">
+      <section>
         <StyledFormContact onSubmit={submitHandler}>
           <StyledTableContact>
             <tbody>

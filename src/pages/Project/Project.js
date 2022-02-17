@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ProjectIntroduce, ProjectPagination } from '../../components';
-import { projectDatas } from '../../mock/ProjectDatas';
+import { ProjectIntroduce, ProjectPagination } from 'components';
+import { projectDatas } from 'mock/ProjectDatas';
 import { StyledMainWrapper, StyledSectionDescription } from './Project.style';
 
 const Project = () => {

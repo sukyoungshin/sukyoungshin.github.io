@@ -2,6 +2,8 @@ import { useState } from 'react';
 import axios from 'axios';
 
 const useContactFormAPI = () => {
+
+  // 입력받은 폼 데이터
   const [ userData, setUserData ] = useState({
     username: '',
     useremail: '',
@@ -19,7 +21,8 @@ const useContactFormAPI = () => {
     })
   };
 
-  const [ isSubmitted, setIsSubmitted ] = useState(false); // 폼제출여부
+  // 폼제출여부
+  const [ isSubmitted, setIsSubmitted ] = useState(false); 
   const submitHandler = (e) => {
     e.preventDefault();
 
