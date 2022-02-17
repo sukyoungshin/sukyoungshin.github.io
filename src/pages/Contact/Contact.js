@@ -1,40 +1,13 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import { SiNotion } from 'react-icons/si';
 import { StyledMainWrapper, StyledSectionDescription, StyledFormContact, StyledTableContact, StyledButtonSubmit, StyledSpanBold } from './Contact.style';
+import useContactFormAPI from './hooks';
 
 const Contact = () => {
 
-  const [ userData, setUserData ] = useState({
-    username: '',
-    useremail: '',
-    usercontact: '',
-    emailtitle: '',
-    emailcontent: ''
-  });
-  const { username, useremail, usercontact, emailtitle, emailcontent } = userData;
-
-  const changeHandler = (e) => {
-    const { value, name } = e.target;
-
-    return setUserData({
-    ...userData,
-    [name] : value,
-    })
-  };
-
-  const [ isSubmitted, setIsSubmitted ] = useState(false); // 폼제출여부
-  const submitHandler = (e) => {
-    e.preventDefault();
-
-    try {
-      const postUserData = axios.post('https://sheet.best/api/sheets/7d47a005-f361-4999-8467-3dd29a6f813a', userData);
-      setUserData(postUserData); // 제출된 정보 API로 전달
-      setIsSubmitted(prev => !prev); // 제출완료
-    } catch(err) {
-      window.alert('전송이 실패되었습니다. 에러 : ', err);
-    }
-  };
+  /* Contact Form API (커스텀훅) */
+  const { userData, changeHandler, isSubmitted, submitHandler } = useContactFormAPI();
+  const { username, useremail, usercontact, emailtitle, emailcontent } = userData;  
 
   return (
     <StyledMainWrapper>
@@ -65,7 +38,17 @@ const Contact = () => {
                 <label htmlFor="username">성함</label>
               </th>
               <td>
-                <input type="text" id="username" name="username" value={username} onChange={changeHandler} placeholder="홍길동" autoFocus required />
+                <input 
+                  type="text" 
+                  id="username" 
+                  name="username" 
+                  value={username} 
+                  onChange={changeHandler} 
+                  placeholder="홍길동" 
+                  autoFocus 
+                  autoComplete='false'
+                  required 
+                />
               </td>
             </tr>
             <tr>
@@ -73,7 +56,16 @@ const Contact = () => {
                 <label htmlFor="useremail">이메일</label>
               </th>
               <td>
-                <input type="email" id="useremail" name="useremail" value={useremail} onChange={changeHandler} placeholder="admin@naver.com" required />
+                <input 
+                  type="email" 
+                  id="useremail" 
+                  name="useremail" 
+                  value={useremail} 
+                  onChange={changeHandler} 
+                  placeholder="admin@naver.com" 
+                  autoComplete='false'
+                  required 
+                />
               </td>
             </tr>
             <tr>
@@ -81,7 +73,16 @@ const Contact = () => {
                 <label htmlFor="usercontact">연락처</label>
               </th>
               <td>
-                <input type="number" id="usercontact" name="usercontact" value={usercontact} onChange={changeHandler} placeholder="010 0000 0000" required />
+                <input 
+                  type="text" 
+                  id="usercontact" 
+                  name="usercontact" 
+                  value={usercontact} 
+                  onChange={changeHandler} 
+                  placeholder="010 0000 0000" 
+                  autoComplete='false'
+                  required 
+                />
               </td>
             </tr>
             <tr>
@@ -89,7 +90,15 @@ const Contact = () => {
                 <label htmlFor="emailtitle">제목</label>
               </th>
               <td>
-                <input type="text" id="emailtitle" name="emailtitle" value={emailtitle} onChange={changeHandler} placeholder="제목" />
+                <input 
+                  type="text" 
+                  id="emailtitle" 
+                  name="emailtitle" 
+                  value={emailtitle} 
+                  onChange={changeHandler} 
+                  placeholder="제목" 
+                  autoComplete='false'
+                />
               </td>
             </tr>
             <tr className="content">
@@ -97,7 +106,15 @@ const Contact = () => {
                 <label htmlFor="emailcontent">내용</label>
               </th>
               <td>
-                <textarea id="emailcontent" name="emailcontent" value={emailcontent} onChange={changeHandler} placeholder="내용을 입력해주세요." required></textarea>
+                <textarea 
+                  id="emailcontent" 
+                  name="emailcontent" 
+                  value={emailcontent} 
+                  onChange={changeHandler} 
+                  placeholder="내용을 입력해주세요." 
+                  autoComplete='false'
+                  required 
+                />
               </td>
             </tr>
             </tbody>
