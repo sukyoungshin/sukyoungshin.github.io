@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useNavigate, useParams, useLocation } from "react-router-dom";
-import { StyledMainWrapper, StyledSectionDescription, StyledDivDetail, StyledButtonClose } from './ImgModal.style';
+import { StyledMainWrapper, StyledSectionDescription, StyledDivDetail, StyledButtonClose, StyledImage } from './ImgModal.style';
 import { MdOutlineClose } from "react-icons/md";
 
 const ImgModal = () => {
@@ -23,7 +23,7 @@ const ImgModal = () => {
         </StyledSectionDescription>
 
         <StyledDivDetail>
-          <img 
+          <StyledImage 
             src={imageURL} 
             alt={`${title} - ${id}번째 이미지`} 
           />

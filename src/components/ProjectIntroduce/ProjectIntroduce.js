@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { StyledSection, StyledArticleImgWrapper, StyledArticleContentWrapper, StyledDivTitle, StyledDivTechStack, StyledDivURL, StyleDivdDescription, HightLight } from './ProjectIntroduce.style';
+import { StyledSection, StyledArticleImgWrapper, StyledArticleContentWrapper, StyledDivTitle, StyledDivTechStack, StyledDivURL, StyleDivdDescription, HightLight, StyledImage } from './ProjectIntroduce.style';
+import noImage from 'img/noimage.webp';
 
 const ProjectIntroduce = ({ projectDatas }) => {
 
@@ -16,7 +17,11 @@ const ProjectIntroduce = ({ projectDatas }) => {
               state={{ imageURL : image, projectDatas : projectDatas }}
             >
               <li>
-                <img src={image} alt={`프로젝트 ${idx}번째 이미지`} />
+                <StyledImage 
+                  id={idx}
+                  src={ image || noImage } 
+                  alt={`프로젝트 ${idx}번째 이미지`} 
+                />
               </li>
             </Link>
           ))

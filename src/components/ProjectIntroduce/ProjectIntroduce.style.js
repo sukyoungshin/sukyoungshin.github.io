@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StyledSection = styled.section`
   height: calc(100% - 192px);
 `;
+
 export const StyledArticleImgWrapper = styled.article`
   width: 100%;
   height: 20%;
@@ -23,15 +24,24 @@ export const StyledArticleImgWrapper = styled.article`
       height: 100%;
     }
   }
-  img {
-    width: 100%;
-    height: 100%;
+`;
+
+export const StyledImage = styled.img`
+  width: 100%;
+  height: 100%;
+  font-size: var(--font-size-12);
+  transition: all 0.3s;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
   }
 `;
+
 export const StyledArticleContentWrapper = styled.article`
   margin: 8px 0 0 0;
   width: 100%;
-  height: 80%;
+  height: 78%;
 
   position: relative;
 
@@ -53,6 +63,7 @@ export const StyledArticleContentWrapper = styled.article`
     grid-gap: 2px;
   }
 `;
+
 export const StyledDivTitle = styled.div`
   height: fit-content;
 
@@ -60,6 +71,7 @@ export const StyledDivTitle = styled.div`
     margin: 8px 0;
   }
 `;
+
 export const StyledDivTechStack = styled.div`
   height: fit-content;
 
@@ -75,10 +87,12 @@ export const StyledDivTechStack = styled.div`
   }
 
 `;
+
 export const StyledDivURL = styled.div`
   margin: 0;
   height: fit-content;
 `;
+
 export const StyleDivdDescription = styled.div`
   flex: 1; /* flex 1칸 전체를 차지하도록 */
   overflow-y: auto;

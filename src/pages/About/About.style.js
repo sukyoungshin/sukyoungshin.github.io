@@ -74,6 +74,7 @@ export const StyledSectionDescription = styled.section`
   ul {
     font-size: var(--font-size-14);
 
+    flex: 1;
     display: inline-flex;
     flex-direction: column;
     grid-gap: 4px;

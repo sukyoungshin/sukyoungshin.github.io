@@ -6,15 +6,15 @@ import ProfileImg from 'img/profile.png';
 const Hashtags = [
   {
     id: 1,
-    description: '#화려한_기술보다는_기본기에_충실하는',
+    description: '#정확함을_추구하는',
   }, 
   {
     id: 2,
-    description: '#피드백을_적극_수용하고_개선하는',
+    description: '#영어문서_독해가능한',
   }, 
   {
     id: 3,
-    description: '#협업의_중요성을_알고있는',
+    description: '#꾸준한',
   }
 ];
 

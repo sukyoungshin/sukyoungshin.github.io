@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const StyledMainWrapper = styled.main`
   padding: 16px;
@@ -91,22 +91,24 @@ export const StyledDivDetail = styled.div`
   justify-content: space-between;
   grid-gap: 8px;
   gap: 8px;
+`;
 
-  img {
-    width: 100%;
-  }
+export const StyledImage = styled.img`
+  width: 100%;
+  min-height: 400px;
+  font-size: var(--font-size-12);
 `;
 
 export const StyledButtonClose = styled.button`
   width: 100%;
   height: 40px;
   font-size: var(--font-size-12);
-  transition: all 0.2s;
+  transition: all 0.3s;
 
-  ${(props) => props.isSubmitted && css`
+  &:hover {
     color: var(--color-white);
     background-color: var(--color-pink-opacity);
-  `}
+  }
 
   display: inline-flex;
   flex-direction: row;
