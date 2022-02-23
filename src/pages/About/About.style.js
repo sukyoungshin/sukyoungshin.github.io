@@ -10,6 +10,9 @@ export const StyledMain = styled.main`
   top: 0;
   left: 0;
 
+  display: inline-flex;
+  flex-direction: column;
+
   h2 {
     margin: 40px 0 0 0px;
   }
@@ -69,7 +72,7 @@ export const StyledSectionDescription = styled.section`
 
   img {
     width: 40%;
-    height: 50%;
+    height: 100%;
   }
   ul {
     font-size: var(--font-size-14);
@@ -87,26 +90,18 @@ export const StyledSectionDescription = styled.section`
   }
 `;
 
-export const StyledAboutSection = styled.section`
-  p {
-    margin: 4px 0;
-    line-height: 20px;
-    font-size: var(--font-size-12);
-  }
-
-  p:not(.greet) {
-    text-indent: 4px;
-  }
-`;
 export const StyledIntroduceSection = styled.section`
+  flex: 1;
   font-size: var(--font-size-14);
+  overflow-y: auto;
 
   p:not(.greet) {
     text-indent: 4px;
   }
 `;
+
 export const StyledHashtagSection = styled.section`
-  margin: 24px 0 0 0;
+  margin: 0 0 24px 0;
   width: 100%;
 
   h3 {
